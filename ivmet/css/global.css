@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+HTML {
+  font-size: 18px;
+  font-family: "Comfortaa";
+  font-display: swap;
+}
+
+body {
+  padding-top: 55px;
+}
+
+p,
+h3 {
+  font-family: "Work Sans", sans-serif;
+}
+
+.navbar_link {
+  color: rgb(0, 0, 0);
+}
+
+:root {
+  --background: rgb(255, 255, 255);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* navigation styles start here */
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0px;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: rgb(3, 3, 3);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+
+div.row:nth-child(3) {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  nav {
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    grid-column: 3 / 5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+}
+
+/*----- Media Query for less than 600 screen size -----*/
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  .row {
+    text-align: center;
+ }
+
+  .warrantyText h2 {
+    color: #a36900;
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+
+  .rating_star {
+    width: 50% !important;
+  }
+
+  .warrantyText {
+    flex-basis: 35%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+
+  .warrantyContent {
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .aboutText h2 {
+    color: #cb8300;
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+
+  .aboutText {
+    flex-basis: 35%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    font-size: 15px;
+  }
+
+  .aboutText img {
+    width: 100%;
+  }
+
+  .aboutContent {
+    display: block !important;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .bannerInfo img {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .heroText {
+    background: linear-gradient(
+      120deg,
+      rgba(200, 200, 200, 1) 0%,
+      rgba(240, 240, 240, 1) 99%
+    );
+    position: relative;
+    left: 0%;
+    bottom: 0%;
+    top: 0%;
+    padding-top: 150px;
+    margin-bottom: -70px;
+  }
+
+  .bannerInfo {
+    text-align: center;
+    padding-left: 0;
+    position: relative;
+  }
+
+  .background {
+    background-size: 100%;
+    padding-top: 60%;
+  }
+
+  .bottleText p {
+    margin-bottom: 31px;
+    margin-top: 27px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .col-2 p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .bagInfo {
+    margin-left: 0%;
+  }
+
+  .kitchenImg img {
+    width: 100%;
+  }
+
+  .about p {
+    margin-left: -130px;
+  }
+
+  .small-container img {
+    margin-top: 33px;
+  }
+
+  .baginfo p {
+    margin-bottom: 31px;
+    margin-top: 27px;
+    margin-left: 0px;
+    margin-right: 0;
+  }
+
+  .bottleText h1 {
+    padding-top: 5%;
+  }
+
+  .bagInfo h1 {
+    padding-top: 5%;
+  }
+
+  .bannerInfo p {
+    padding-top: 10%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+  }
+
+  .bannerInfo h1 {
+    margin-top: -27%;
+    font-size: 30px;
+  }
+
+  .col-2,
+  .col-3,
+  .col-4 {
+    flex-basis: 90%;
+  }
+
+  .about {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  .amazonLink {
+    flex-basis: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0%;
+  }
+
+
+  .amazon {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .showcase {
+    flex-wrap: wrap;
+  }
+
+  .showcase img {
+    width: 100%;
+  }
+
+  .offer-img {
+    width: 100%;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-col-2 h3 {
+    margin-right: 0px;
+  }
+
+  .footer-col-2 p {
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  .footer-col-2 h3 {
+    padding-left: 0px;
+  }
+
+
+
+}
+
+/*----- Media Query for ipads -----*/
+@media only screen and (min-device-width: 500px) and (max-device-width: 1500px) {
+  .background {
+    background-image: url(/images/set.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+  }
+
+  .warrantyText h2 {
+    color: #a36900;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .warrantyText {
+    flex-basis: 35%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    font-size: 15px;
+  }
+
+  .warrantyContent {
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .offer-img {
+    width: 100%;
+  }
+
+  .heroText {
+    position: absolute;
+    left: 7%;
+    top: 10%;
+  }
+
+  .heroText h1 {
+    font-size: 30px;
+  }
+
+  .heroText p {
+    font-size: 13px;
+  }
+
+  .footer {
+    text-align: center;
+    padding-left: 11px;
+  }
+
+  .footer-col-2 {
+    margin-right: 33px;
+    margin-bottom: 0px;
+  }
+
+  .footer-col-1 {
+    margin-left: 6px;
+  }
+
+  .footer-col-4 {
+    margin-top: 60px;
+  }
+}
