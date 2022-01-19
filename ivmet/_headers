@@ -1,6 +1,6 @@
 /*
   Content-Security-Policy: frame-ancestors 'none'
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'none' https://plausible.io; script-src 'self'; connect-src 'self'; img-src 'self'; font-src fonts.gstatic.com; style-src 'self' fonts.googleapis.com; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self' https://plausible.io; script-src 'self'; connect-src 'self'; img-src 'self'; font-src fonts.gstatic.com; style-src 'self' fonts.googleapis.com; base-uri 'self'; form-action 'self'
   X-Content-Type-Options: nosniff  
   X-Frame-Options: SAMEORIGIN
