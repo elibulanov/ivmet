@@ -250,7 +250,6 @@ div.row:nth-child(3) {
   }
 
   .bannerInfo img {
-    display: none;
     width: 100%;
     height: auto;
   }
