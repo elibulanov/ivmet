@@ -134,12 +134,15 @@ p {
   padding-bottom: 20px;
 }
 
+
+
 .warrantyText {
   flex-basis: 35%;
   padding: 10px;
   min-width: 200px;
   margin-bottom: 50px;
 }
+
 
 .warrantyContent {
   display: flex;
@@ -155,10 +158,11 @@ p {
 }
 
 .aboutText {
-  flex-basis: 58%;
+  flex-basis: 28%;
   padding: 10px;
   min-width: 200px;
   margin-bottom: 50px;
+  padding-top: 3em;
 }
 
 .aboutText img {
@@ -175,6 +179,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-top: 5em;
 }
 
 .title {
@@ -353,3 +358,9 @@ ul {
 .copyright {
   text-align: center;
 }
+
+
+/* about  */
+
+
+
